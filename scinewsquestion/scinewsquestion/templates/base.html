@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block page_title %}{% endblock page_title %}</title>
+    <script src="{% static "dist/jquery.js" %}" type="text/javascript"></script>
+    <script src="{% static "dist/jquery-ui.js" %}" type="text/javascript" ></script>
+    <link href="{% static "dist/jquery-ui.css" %}"  rel="stylesheet">
+    <script src="{% static "dist/popper.js" %}" type="text/javascript" ></script>
+    <script src="{% static "dist/tether.min.js" %}" type="text/javascript" ></script>
+    <link href="{% static "dist/tether.min.css" %}"  rel="stylesheet">
+    <script src="{% static "dist/bootstrap.js" %}" type="text/javascript" ></script>
+    <link href="{% static "dist/bootstrap.css" %}"  rel="stylesheet">
+    <link href="{% static "dist/font-awesome/css/font-awesome.css" %}"  rel="stylesheet">
+    <script src="{% static "dist/jquery.cookie.js" %}" type="text/javascript" ></script>
+    {% block scripts %}{% endblock %}
+  </head>
+  
+  <body>
+  {% block document_body %}
+    <div id=document-container>{% block document_container %}{% endblock document_container %}</div>
+    
+    <footer id=document-footer>{% block document_footer %}{% endblock document_footer %}</footer>
+  {% endblock document_body %}
+  </body>
+</html>

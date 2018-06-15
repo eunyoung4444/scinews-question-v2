@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+   {% load staticfiles %}
+    {% block scripts %}
+
+    {% endblock %}    
+    {% block document_container %}
+    
+    <div style="min-height:100%;" class="container-fluid" id="background">
+    <!--Top margin, can be used as nav bar or so, later. -->
+     <div class="row" id="top-margin">
+     </div> 
+     <div class="row" id="main">
+            <div class="col-1" class="col-container"></div>
+            <div class="col-10" class="col-container">
+                    <div id="signup">
+                        <h2>Sign Up</h2>
+                        <p>Please sign up with your MTurk worker ID as a Username </p>
+                        <form method="post" action="">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="submit" class="btn btn-info" value="Sign Up" />
+                        </form>
+                    </div>
+            </div>
+            <div class="col-1" class="col-container"></div>
+            </div> <!-- End of col-container-->
+            <div class="row" id="bottom-margin">
+                            <div class="col-10" class="col-container"></div>
+                            <div class="col-2" class="col-container"> </p> </div>
+                    </div> 
+</div>
+
+{% endblock %}

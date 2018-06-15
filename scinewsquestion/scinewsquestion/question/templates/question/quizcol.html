@@ -1,0 +1,65 @@
+   {% extends "base.html" %}
+   {% load staticfiles %}
+    {% block scripts %}
+        <script src="{% static "js/quizcol.js" %}" type="text/javascript" ></script>
+        <link href="{% static "css/quizcol.css" %}" rel="stylesheet"> 
+    {% endblock %}    
+
+    {% block document_container %}
+    <div style="min-height:100%;" class="container-fluid" id="background">
+        <!--Top margin, can be used as nav bar or so, later. -->
+         <div class="row" id="top-margin">
+                 <div class="col-10" class="col-container"></div>
+                 <div class="col-2" class="col-container"> <p id="username">{{ user.get_username }}</p> </div>
+         </div> 
+         <div class="row" id="main">
+           <div class="col-8" class="col-container">
+             <div id="article">
+              <div id="head">
+                <h1 class="title">{{ article.article_title }}</h1>
+                <h1 class="date">Nov. 28th, 2016 <hide id="ano" style="display:none">{{ article.article_no }}</hide></h1>
+                 <hr>
+                </div>
+              <div  class="row">
+                      <div id="text" style="display:none;" class="col-11" class="col-container">
+                          {{article.article_body}}</div>
+                      <div class="col-1" class="col-container">
+                              <div id="addbuttons" style="position:absolute">
+                                <button type="button"  class="btn btn-success btn-circle addbuttons" id="addQbutton"><i class="fa fa-question"></i></button>
+                                <button type="button"  class="btn btn-warning btn-circle addbuttons" id="addEbutton" ><i class="fa fa-star" style="color:white"></i></button>
+                        </div>
+                        </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="col-4" class="col-container" id="sidebar-container">
+             <div id="floating-div">
+                <div id="help" class="sections" style="display:none">
+                        <button id="helpbutton" data-toggle="collapse" data-target="#helpmessage" class='btn' style="width:100%;height:30px;background-color:rgb(253, 172, 22);color:white;padding:0px"> Click to see help </button>
+                        <div id="helpmessage" class="collapse" style="padding:10px">
+                            <p>Suppose you are a teacher and make a quiz to help your students to grasp important information.</p>
+                            <p>For each quiz question, indicate one or more sentences that can answer the question. </p>
+                            <p>Click <span class="btn btn-warning btn-circle" style="width:15px;height:15px;padding:0px;" disabled><i class="fa fa-star" style="color:white;font-size:11px;vertical-align:top;"></i></span>, select sentence(s), and type in quiz question that can be answered by the selected sentences.</p> <p> Your list of questions will be shown in the <span style="color:#ffc107">yellow</span> box.</p>
+                        </div>
+                    </div>
+                <div id="Question" class="sections"> 
+                <h6>Questions that you've made <small>(total <small id="qnumtotal">0</small>)</small> <small><a id="showless" style="display:none" onclick="ShowLess();" href="#">show less</a><small></h6>
+                <div><small id="lastlyadded" style="display:none">Lastly added:</small></div>
+                    <div id="questions_generated" class="sections"></div> 
+            </div>
+            <div id="Quiz" class="sections" > 
+                <h6>Questions that you've made <small>(total <small id="qnumtotal_q">0</small>)</small> <small><a id="showless_q" style="display:none" onclick="ShowLess_q();" href="#">show less</a><small></h6>
+                <div><small id="lastlyadded_q" style="display:none">Lastly added:</small></div>
+                    <div id="quiz_generated" class="sections"></div> 
+            </div>
+            <div id="next" class="sections">
+            <button class="btn" id="submitQuizbutton" onclick="submitQs" style="width:100%;height:30px;padding:3px;" dataref="{{user.id}}">Next</button>
+         </div>           
+                
+        </div>
+     </div> <!-- End of col-container-->
+     </div>
+    <div class="row" id="footer"> Critical reading </div>
+</div>
+{% endblock %}

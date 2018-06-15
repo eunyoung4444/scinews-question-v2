@@ -1,0 +1,105 @@
+   {% extends "base.html" %}
+   {% load staticfiles %}
+    {% block scripts %}
+        <script src="{% static "js/colqcol.js" %}" type="text/javascript" ></script>
+        <link href="{% static "css/colqcol.css" %}" rel="stylesheet"> 
+    {% endblock %}    
+
+    {% block document_container %}
+    <div style="min-height:100%;" class="container-fluid" id="background">
+        <!--Top margin, can be used as nav bar or so, later. -->
+         <div class="row" id="top-margin">
+                 <div class="col-10" class="col-container"></div>
+                 <div class="col-2" class="col-container"> <p id="username">{{ user.get_username }}</p> </div>
+         </div> 
+         <div class="row" id="main">
+           <div class="col-8" class="col-container">
+             <div id="article">
+              <div id="head">
+                <h1 class="title">{{ article.article_title }}</h1>
+                <h1 class="date">Nov. 28th, 2016 <hide id="ano" style="display:none">{{ article.article_no }}</hide></h1>
+                 <hr>
+                </div>
+              <div  class="row">
+                      <div id="text" style="display:none;" class="col-11" class="col-container">
+                          {{article.article_body}}</div>
+                      <div class="col-1" class="col-container">
+                              <div id="addbuttons" style="position:absolute">
+                          <!--      <button type="button"  class="btn btn-success btn-circle addbuttons" id="addQbutton"><i class="fa fa-question"></i></button> -->
+                                <button type="button"  class="btn btn-warning btn-circle addbuttons" id="addEbutton"><i class="fa fa-star" style="color:white"></i></button>
+                        </div>
+                        </div>
+                </div>
+                
+            </div>
+           </div>
+           <div class="col-4" class="col-container" id="sidebar-container">
+             <div id="floating-div">
+              <div id="QtoA" style="display:none;"> 
+                Questions to be answered
+                <div id="selected_questions" class="sections">
+              </div>  <!-- End of selected_questions-->
+                </div>
+             <div id="QwithA" style="display:none;"> 
+                        Questions you've answered
+                        <div id="answeredquestions" class="sections">
+                        </div>  <!-- End of selected_questions-->
+                        </div>
+        </div>
+     </div> <!-- End of col-container-->
+     </div>
+    <div class="row" id="footer"> Critical reading </div>
+</div>
+
+<!-- Popup  -->
+<div id="boxes">
+            <div style="display: none;" id="dialog" class="window">
+              <div style="text-align:left;">
+                <h4> What do you want to know from this article? </h4>
+            </div>
+              <h3 id="popuptitle" align="center">"{{article.article_title}}"</h3> 
+              <hr>
+            <div class="row" id="Qgen">
+                <div class="col-xs-6" class="col-container" id="getQs">
+                        <p> Make your set of questions </p>
+                        <div class="row constQTypes"> 
+                                <div id="choosefromList">
+                                        <p style="font-size:10px">Doubleclick to add to your list</p>
+                                        <div>
+                                        <ul class="list-group" id="existingQs">
+                                                        {% for question in questions %}
+                                                        <li class="list-group-item justify-content-between existQs"><span class="questions">{{question.question_text}}</span>
+                                                                <span class="questionby"> by {{question.question_madeby}}</span>
+                                                                <span class="badge"> {{question.question_popularity}}</span>
+                                                                <hide class="qpk" style="display:none">{{ question.pk }}</hide> 
+                                                        </li>
+                                                        {% endfor %}
+                                        </ul>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="row constQTypes">
+                         <div id="makeyourown">
+                                        <p style="font-size:10px">Type in your Questions</p>
+                                        <div id="typeinquestion" onSubmit="return false;">
+                                                        <form><input id="typeQ"></form>
+                                        </div>
+                      </div>
+                </div>
+                </div>
+                <div class="col-xs-6" class="col-container" id="seeQs">
+                        <p> <span id="userquestion">Questions that you want to answer:</p>
+                        <ul class="list-group" id="myquestions">
+                        </ul>
+                </div>
+            </div> 
+
+
+            <!-- Read Button -->
+            <div id="popupfoot"> 
+                      <button type="button" class="btn btn-success" style="float: right;" id="letsread">Let's Read!</button>                      
+                    </div>
+            </div>
+            <div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+    </div>
+{% endblock %}
