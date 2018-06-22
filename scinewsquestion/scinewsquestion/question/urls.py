@@ -15,5 +15,6 @@ urlpatterns = [
     url(r'^(?P<article_no>[0-9]+)/deletegenquestion$', views.deletegenquestion, name='deletegenquestion'),
     url(r'^signup/$',views.signup,name='signup'),
     url(r'^login/$',views.signin, name='login'),
+    url(r'^tutorial/$',views.tutorial, name='tutorial'),
 ]
 

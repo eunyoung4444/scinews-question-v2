@@ -1,0 +1,872 @@
+[
+{
+ "model": "question.annotquestion",
+ "pk": 37,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Why are you curious about this?",
+  "question_madeby": 7,
+  "question_id": "annot1",
+  "question_reftext": "cancer and taking high quantities of B vitamins",
+  "question_pubdate": "2018-06-15T05:12:40.734Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:12:40.734Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 38,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "did the authors really showed causality, not correlation?",
+  "question_madeby": 9,
+  "question_id": "annot1",
+  "question_reftext": "the authors conclude.",
+  "question_pubdate": "2018-06-15T05:12:46.978Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:12:46.978Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 39,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "How long?",
+  "question_madeby": 4,
+  "question_id": "annot1",
+  "question_reftext": "long period were",
+  "question_pubdate": "2018-06-15T05:12:51.687Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:12:51.687Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 40,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Why lung cancer?",
+  "question_madeby": 7,
+  "question_id": "annot2",
+  "question_reftext": "vitamins, and lung cancer",
+  "question_pubdate": "2018-06-15T05:13:18.163Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:13:18.163Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 41,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Why only men?",
+  "question_madeby": 7,
+  "question_id": "annot3",
+  "question_reftext": "focuses on men",
+  "question_pubdate": "2018-06-15T05:13:36.233Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:13:36.233Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 42,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "What is the mechanism?",
+  "question_madeby": 7,
+  "question_id": "annot4",
+  "question_reftext": "B6 or B12 significantly increased their risk of lung cancer",
+  "question_pubdate": "2018-06-15T05:13:58.045Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:13:58.045Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 45,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "what's the criterion for determining high/low doses?",
+  "question_madeby": 8,
+  "question_id": "annot1",
+  "question_reftext": "extraordinarily high doses",
+  "question_pubdate": "2018-06-15T05:14:50.165Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:14:50.165Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 46,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Why is it so high then?",
+  "question_madeby": 4,
+  "question_id": "annot2",
+  "question_reftext": "B12 it is 1.5mcg (micrograms) a day for adults. \n\nBut",
+  "question_pubdate": "2018-06-15T05:14:51.293Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:14:51.293Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 47,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "How are these high doses permitted in supplement bottles?",
+  "question_madeby": 2,
+  "question_id": "annot1",
+  "question_reftext": "day. \u201cBut if you look at these supplement bottles, they\u2019re being sold in pill form at up to 5,000 micrograms per dose, which is much, much higher than the daily recommended amount,\u201d said",
+  "question_pubdate": "2018-06-15T05:15:20.068Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:15:20.068Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 48,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "what does this mean? how do they compute the likelihood to develop lung cancer?",
+  "question_madeby": 5,
+  "question_id": "annot1",
+  "question_reftext": "three times more likely to develop lung cancer",
+  "question_pubdate": "2018-06-15T05:15:25.389Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:15:25.389Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 49,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "What is this?",
+  "question_madeby": 8,
+  "question_id": "annot2",
+  "question_reftext": "RDA",
+  "question_pubdate": "2018-06-15T05:15:33.808Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:15:33.808Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 50,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "What are the criteria for determining this?",
+  "question_madeby": 8,
+  "question_id": "annot3",
+  "question_reftext": "extraordinarily high doses",
+  "question_pubdate": "2018-06-15T05:16:09.119Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:16:09.119Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 51,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "what does this mean? how do they compute the likelihood to develop lung cancer?",
+  "question_madeby": 5,
+  "question_id": "annot1",
+  "question_reftext": "three times more likely to develop lung cancer",
+  "question_pubdate": "2018-06-15T05:16:21.713Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:16:21.713Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 52,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "why men only? including women would increase the size of data, but is there any reason to exclude them?",
+  "question_madeby": 18,
+  "question_id": "annot1",
+  "question_reftext": "men",
+  "question_pubdate": "2018-06-15T05:16:23.658Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:16:23.658Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 53,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Why is this the recommended daily allowance - what is the reason that there is a limit to the recommended allowance?",
+  "question_madeby": 2,
+  "question_id": "annot2",
+  "question_reftext": "The recommended daily allowance for vitamin B6 for men is only about one and a half milligrams, and for vitamin B12, it\u2019s less than two and a half micrograms per",
+  "question_pubdate": "2018-06-15T05:16:35.620Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:16:35.620Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 54,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "What is the gender of the participants?",
+  "question_madeby": 3,
+  "question_id": "annot1",
+  "question_reftext": "Some 77,118 participants aged between 50 and 76 were asked to detail their diets and use of supplements over the previous ten years. Their",
+  "question_pubdate": "2018-06-15T05:16:39.015Z",
+  "question_deleted": true,
+  "question_deletedate": "2018-06-15T05:18:25.714Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 55,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "How are B6 and B9 different?",
+  "question_madeby": 8,
+  "question_id": "annot4",
+  "question_reftext": "In this case, the vitamins used were folate (B9) and Vitamin B12.\n\nThe",
+  "question_pubdate": "2018-06-15T05:16:41.374Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:16:41.374Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 56,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "can this be because there are less women smoking? can smoking play a huge role in the phenomena/observation?",
+  "question_madeby": 5,
+  "question_id": "annot2",
+  "question_reftext": "no similar risk in women who took the supplements",
+  "question_pubdate": "2018-06-15T05:17:19.057Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:17:19.057Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 57,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Did these other studies also study just the male?",
+  "question_madeby": 8,
+  "question_id": "annot5",
+  "question_reftext": "reports",
+  "question_pubdate": "2018-06-15T05:17:22.663Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:17:22.663Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 58,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "vitamin B has the cancer risk? or what? ",
+  "question_madeby": 6,
+  "question_id": "annot1",
+  "question_reftext": "vitamin B cancer risk",
+  "question_pubdate": "2018-06-15T05:17:24.688Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:17:24.688Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 59,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "So how much should I consume for the B?",
+  "question_madeby": 7,
+  "question_id": "annot5",
+  "question_reftext": "to 'overdose' on B vitamins",
+  "question_pubdate": "2018-06-15T05:17:25.917Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:17:25.917Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 60,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "I thought it was only a male study",
+  "question_madeby": 3,
+  "question_id": "annot2",
+  "question_reftext": "Women did not show an increased risk",
+  "question_pubdate": "2018-06-15T05:19:06.264Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:19:06.264Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 61,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "As the research is done with review of medical record, does it really limit the other factors that increase cancer except for vitamin B and smoking?",
+  "question_madeby": 6,
+  "question_id": "annot2",
+  "question_reftext": "The research is based on a review of medical records over the long-term. It",
+  "question_pubdate": "2018-06-15T05:19:23.262Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:19:23.262Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 62,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Then is there anyone who is in need of taking vitamin B? ",
+  "question_madeby": 4,
+  "question_id": "annot3",
+  "question_reftext": "so there really is no reason to supplement your vitamin B intake at these levels, and certainly not for years on end",
+  "question_pubdate": "2018-06-15T05:19:34.710Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:19:34.710Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 63,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "What's the connection between smoking and high vitamin doses? ",
+  "question_madeby": 8,
+  "question_id": "annot6",
+  "question_reftext": "Most of the risk was linked to men who were active smokers throughout the period. Their",
+  "question_pubdate": "2018-06-15T05:19:48.458Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:19:48.458Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 64,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "this was why they focused on men only",
+  "question_madeby": 18,
+  "question_id": "annot1",
+  "question_reftext": "Women did not show an increased risk.\n\nMost",
+  "question_pubdate": "2018-06-15T05:21:56.853Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:21:56.853Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 65,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Why?",
+  "question_madeby": 7,
+  "question_id": "annot1",
+  "question_reftext": "Women did not show an increased risk",
+  "question_pubdate": "2018-06-15T05:22:53.247Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:22:53.247Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 66,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Which vitamin B? ",
+  "question_madeby": 9,
+  "question_id": "annot1",
+  "question_reftext": "B vitamins.",
+  "question_pubdate": "2018-06-15T05:23:10.255Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:23:10.255Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 67,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Implies everyone takes vitamin B for energy boosting purposes?",
+  "question_madeby": 8,
+  "question_id": "annot1",
+  "question_reftext": "energy-boosting",
+  "question_pubdate": "2018-06-15T05:23:25.504Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:23:25.504Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 68,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "how long?",
+  "question_madeby": 8,
+  "question_id": "annot2",
+  "question_reftext": "long period were",
+  "question_pubdate": "2018-06-15T05:24:52.123Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:24:52.123Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 69,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "what is the baseline in absolute numbers?",
+  "question_madeby": 8,
+  "question_id": "annot3",
+  "question_reftext": "four times higher",
+  "question_pubdate": "2018-06-15T05:25:08.692Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:25:08.692Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 70,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "There was no any difference b/w the men and women except for gender?",
+  "question_madeby": 6,
+  "question_id": "annot1",
+  "question_reftext": "The same effect was not seen in women",
+  "question_pubdate": "2018-06-15T05:25:21.614Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:25:21.614Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 71,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "What is the possible interaction between the two?",
+  "question_madeby": 8,
+  "question_id": "annot4",
+  "question_reftext": "Male smokers who took more than 20mg of B6 a day for 10 years were three times more likely to develop lung cancer than people who did not take supplements.\n\nThe",
+  "question_pubdate": "2018-06-15T05:26:35.012Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:26:35.012Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 72,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Do other materials in the tablets interact with vitamin B in any way?",
+  "question_madeby": 8,
+  "question_id": "annot5",
+  "question_reftext": "But he said most multivitamin tablets did not contain such high doses so taking those daily should not have the same effect.\n\nFurther",
+  "question_pubdate": "2018-06-15T05:27:26.135Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:27:26.135Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 73,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "maybe it's not vitamin B itself, but the energy drinks are causing negative effects to the takers",
+  "question_madeby": 5,
+  "question_id": "annot1",
+  "question_reftext": "often marketed as energy boosters and present in energy drinks",
+  "question_pubdate": "2018-06-15T05:27:27.259Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:27:27.259Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 74,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Is this because there was some previous evidence of high levels of vitamin B promoting health?",
+  "question_madeby": 2,
+  "question_id": "annot1",
+  "question_reftext": "Vitamin B6 and B12 pills are often marketed as energy or metabolism-boosting products. The",
+  "question_pubdate": "2018-06-15T05:27:27.565Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:27:27.565Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 75,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "mixed = it means that the opinion toward taking supplements of Vitamin B is diverged?",
+  "question_madeby": 6,
+  "question_id": "annot2",
+  "question_reftext": "mixed",
+  "question_pubdate": "2018-06-15T05:28:16.371Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:28:16.371Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 76,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "How are such high levels permitted - is there no restriction legally?",
+  "question_madeby": 2,
+  "question_id": "annot2",
+  "question_reftext": "But tablets available on the high street in the UK can contain as much as 100mg of B6 and 500mcg of B12.\n\nFor",
+  "question_pubdate": "2018-06-15T05:28:17.744Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:28:17.744Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 77,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "What was the case for non-smokers?",
+  "question_madeby": 9,
+  "question_id": "annot1",
+  "question_reftext": "even when factors like age, smoking history, family history of cancer and alcohol consumption were taken into account.",
+  "question_pubdate": "2018-06-15T05:28:47.435Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:28:47.435Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 78,
+ "fields": {
+  "question_research": 1,
+  "question_article": 3,
+  "question_text": "Is this comparable to the current study in terms of the period of study, type of cancer, etc.?",
+  "question_madeby": 8,
+  "question_id": "annot6",
+  "question_reftext": "Excessive doses of vitamin E, beta-carotene and folic acid (vitamin B9) have all previously been linked to increased cancer risk. The",
+  "question_pubdate": "2018-06-15T05:28:56.761Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:28:56.761Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 79,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "how big? what data?",
+  "question_madeby": 8,
+  "question_id": "annot1",
+  "question_reftext": "big data analytics",
+  "question_pubdate": "2018-06-15T05:30:08.131Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:30:08.131Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 80,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "what connection?",
+  "question_madeby": 8,
+  "question_id": "annot2",
+  "question_reftext": "connection",
+  "question_pubdate": "2018-06-15T05:30:18.680Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:30:18.680Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 81,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "8 out of 10 people are having chance to get cancer? or it is comparison to normal people not taking vitamin a lot? ",
+  "question_madeby": 6,
+  "question_id": "annot3",
+  "question_reftext": "80% higher risk of lung cancer",
+  "question_pubdate": "2018-06-15T05:30:21.036Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:30:21.036Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 82,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "what advantages? against what?",
+  "question_madeby": 8,
+  "question_id": "annot3",
+  "question_reftext": "advantages of data driven science. \n\nThe",
+  "question_pubdate": "2018-06-15T05:30:36.743Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:30:36.743Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 83,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "How is this database gathered?",
+  "question_madeby": 4,
+  "question_id": "annot1",
+  "question_reftext": "the SEER (Surveillance, Epidemiology, and End Results) database. This",
+  "question_pubdate": "2018-06-15T05:30:59.229Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:30:59.229Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 84,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Thus, can we say like Vitamin B increases the cancer risk?",
+  "question_madeby": 6,
+  "question_id": "annot4",
+  "question_reftext": "Most of the risk was linked to men who were active smokers throughout the period. Their",
+  "question_pubdate": "2018-06-15T05:31:00.867Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:31:00.867Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 85,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "why does 10 matter? shorter? longer?",
+  "question_madeby": 8,
+  "question_id": "annot4",
+  "question_reftext": "ten year period",
+  "question_pubdate": "2018-06-15T05:31:14.075Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:31:14.075Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 86,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Why is this considered 'high'?",
+  "question_madeby": 2,
+  "question_id": "annot1",
+  "question_reftext": "took high doses of vitamin B6 (with 'high' being defined as 20 milligrams or more per day) increased",
+  "question_pubdate": "2018-06-15T05:31:20.062Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:31:20.062Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 87,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "how exact is this number? how do we know?",
+  "question_madeby": 8,
+  "question_id": "annot5",
+  "question_reftext": "55 micrograms of B12 each day",
+  "question_pubdate": "2018-06-15T05:31:46.230Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:31:46.230Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 88,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "is this even possible? ",
+  "question_madeby": 5,
+  "question_id": "annot2",
+  "question_reftext": "an association between 13 types of vitamins and over 120 different types of cancer",
+  "question_pubdate": "2018-06-15T05:31:50.916Z",
+  "question_deleted": true,
+  "question_deletedate": "2018-06-15T05:31:53.298Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 89,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "not sure if this was mentioned in the previous articles, but seems like useful info.",
+  "question_madeby": 8,
+  "question_id": "annot6",
+  "question_reftext": "SEER",
+  "question_pubdate": "2018-06-15T05:32:10.560Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:32:10.560Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 90,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Why was this assumption popularized in the first place?",
+  "question_madeby": 2,
+  "question_id": "annot2",
+  "question_reftext": "under the assumption that this helps to boost energy levels or lower cholesterol.\n\nThe",
+  "question_pubdate": "2018-06-15T05:32:30.806Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:32:30.806Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 91,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "how many people's data? how accurate and reliable is the data?",
+  "question_madeby": 8,
+  "question_id": "annot7",
+  "question_reftext": "data",
+  "question_pubdate": "2018-06-15T05:32:51.975Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:32:51.975Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 92,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "any supplements?",
+  "question_madeby": 4,
+  "question_id": "annot1",
+  "question_reftext": "High dose supplements",
+  "question_pubdate": "2018-06-15T05:33:48.194Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:33:48.194Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 93,
+ "fields": {
+  "question_research": 1,
+  "question_article": 1,
+  "question_text": "Did it focus on men, or did it find no correlation with women?",
+  "question_madeby": 2,
+  "question_id": "annot3",
+  "question_reftext": "The research focuses on men, and",
+  "question_pubdate": "2018-06-15T05:33:48.399Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:33:48.399Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 94,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Then is there any other factor that could have affected in this result?",
+  "question_madeby": 4,
+  "question_id": "annot2",
+  "question_reftext": "can\u2019t tell you that the link is causal",
+  "question_pubdate": "2018-06-15T05:35:10.460Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:35:10.460Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 95,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "Was there any good case of taking supplement of B?",
+  "question_madeby": 4,
+  "question_id": "annot3",
+  "question_reftext": "science, the reports on taking supplements of B vitamins are mixed",
+  "question_pubdate": "2018-06-15T05:37:25.470Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:37:25.470Z"
+ }
+},
+{
+ "model": "question.annotquestion",
+ "pk": 96,
+ "fields": {
+  "question_research": 1,
+  "question_article": 2,
+  "question_text": "How is this possible when they followed the group for six years?",
+  "question_madeby": 4,
+  "question_id": "annot4",
+  "question_reftext": "for ten years (the",
+  "question_pubdate": "2018-06-15T05:38:53.044Z",
+  "question_deleted": false,
+  "question_deletedate": "2018-06-15T05:38:53.044Z"
+ }
+}
+]

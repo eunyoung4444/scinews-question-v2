@@ -215,6 +215,10 @@
   padding:0;
 }
 
+#surveybutton{
+  padding:0;
+}
+
 .subsections{
   margin-bottom: 10px;
   background-color: #f8f8f8 !important;

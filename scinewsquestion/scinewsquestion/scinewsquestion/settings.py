@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -52,8 +53,7 @@ MIDDLEWARE = [
 
 LOGIN_URL = '/accounts/login/'
 LOGOUT_URL = '/accounts/logout/'
-#LOGIN_REDIRECT_URL = '/critReader/tutorial'
-#LOGIN_REDIRECT_URL='/critReader'
+LOGIN_REDIRECT_URL = '/question/tutorial'
 
 ROOT_URLCONF = 'scinewsquestion.urls'
 

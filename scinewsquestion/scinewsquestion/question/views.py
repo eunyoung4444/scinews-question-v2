@@ -21,6 +21,11 @@ def index(request):
     return render(request, 'critreader/index.html', context)
 
 @csrf_exempt
+def tutorial(request):
+    context={}
+    return render(request, 'question/tutorial.html',context)
+
+@csrf_exempt
 def article(request,article_no):
     try:
         article=Article.objects.get(article_no=article_no)
@@ -43,7 +48,7 @@ def survey(request, survey_no):
     context={
     'survey':thissurvey,
     } 
-    return render(request, 'critreader/surveyembed.html', context)
+    return render(request, 'question/surveyembed.html', context)
 
 @csrf_exempt
 def addannotquestion(request, article_no):
@@ -117,7 +122,7 @@ def signup(request):
             return redirect('tutorial')
     else:
         form = UserForm()
-        return render(request, 'critreader/signup.html', {'form': form})
+        return render(request, 'question/signup.html', {'form': form})
 
 def signin(request):
     if request.method == "POST":
@@ -132,7 +137,7 @@ def signin(request):
             return HttpResponse('Log-In Failed. Try Again.')
     else:
         form = LoginForm()
-        return render(request, 'critreader/login.html', {'form': form})
+        return render(request, 'question/login.html', {'form': form})
 
 @csrf_exempt
 def sessionstart(request, article_no):

@@ -40,6 +40,13 @@
     
     var curorder=currentorder(articleno, userpk);
     document.getElementById("order").innerHTML=String(curorder);
+    if(curorder>1){
+        document.getElementById("prevholder").style.display="inline";
+        document.getElementById("art1").style.display="inline";
+        if(curorder>2){
+            document.getElementById("art2").style.display="inline";    
+        }
+    }
 
     reconSidebar();
     addevents();
@@ -466,7 +473,7 @@ function submitQs(){
         window.location.replace(newurl);        
     }
     else{ // go to survey
-        window.location.replace('../../survey/0');
+        window.location.replace('../survey/0');
     }    
 }
 
@@ -500,4 +507,50 @@ function nextarticle(upk, curord){
     nextorder=curord
     nextano=myorder[nextorder]
     return nextano
+}
+
+function article1(upk, curord){
+    var orders=[
+        [1,2,3],
+        [1,3,2],
+        [2,3,1],
+        [2,1,3],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    prevano=myorder[0]
+    return prevano 
+}
+
+function article2(upk, curord){
+    var orders=[
+        [1,2,3],
+        [1,3,2],
+        [2,3,1],
+        [2,1,3],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    prevprevano=myorder[1]
+    return prevprevano 
+}
+
+function opena1(){
+    var articleno=Number(document.getElementById("ano").innerText);
+    var userpk=Number(document.getElementById('userpk').innerText);
+    var curorder=currentorder(articleno, userpk);
+    a1no=article1(userpk,curorder);
+    window.open('http://4cb16589.ngrok.io/question/'+String(a1no), '_blank')//http://4cb16589.ngrok.io/question/login/
+}
+
+function opena2(){
+    var articleno=Number(document.getElementById("ano").innerText);
+    var userpk=Number(document.getElementById('userpk').innerText);
+    var curorder=currentorder(articleno, userpk);
+    a2no=article2(userpk,curorder);
+    window.open('http://4cb16589.ngrok.io/question/'+String(a2no), '_blank')
 }

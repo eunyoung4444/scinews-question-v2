@@ -9,7 +9,7 @@
  <div style="min-height:100%;" class="container-fluid" id="background">
      <!--Top margin, can be used as nav bar or so, later. -->
       <div class="row" id="top-margin">
-              <div class="col-10" class="col-container"><p>Article <a id="order"></a></p></div>
+              <div class="col-10" class="col-container"><p style="margin-bottom: 0px">Now: Article <a id="order"></a></p><p id="prevholder" style="display:none">Previous articles (new tab) <button id="art1" onclick="opena1()" class="btn"style="display:none;padding:0px;">Article 1</button><a>  </a><button id="art2" onclick="opena2()" class="btn"style="display:none;padding:0px;">Article 2</button></p></div>
               <div class="col-2" class="col-container"> <p id="username">{{ user.get_username }}</p>  <p id="userpk" style="display:none">{{ user.pk }}</p> </div>
       </div> 
       <div class="row" id="main">
@@ -34,8 +34,9 @@
              <div id="help" class="sections">
                  <button id="helpbutton" data-toggle="collapse" data-target="#helpmessage" class='btn' style="width:100%;height:30px;background-color:rgba(0, 155, 0, 0.822);color:white;padding:0px"> Click to see help </button>
                  <div id="helpmessage" class="collapse" style="padding:10px">
-                     <p>Read the article and raise questions. </p> 
-                     <p>Type in question in the <span style="color:rgb(0, 165, 0)">light green</span> box and push the <i class="fa fa-plus" style="color:green"></i> button. Your list of questions will be shown in the <span style="color:rgb(0, 114, 0)">dark green</span> box.</p>
+                     <p>Read the article and raise questions. </p>
+                     <p>You can generate a question on a text range of your choice. Select a range of text and then type in your question. You can delete the question by clicking the highlighted text and then delete button. Overlapping text selection is not supported. </p> 
+                     <p>Also, you can generate a question using the below text box, withoug specific text selection.</p>
                  </div>
              </div>
              <div class="sections" id="Questions">
@@ -47,12 +48,14 @@
                  <h6>What do you want/need to know? </h6>
                  <div id="newQ" style="margin-bottom:20px;">
                      <input type="text" id="newQinput" placeholder="Type in your question"style="width:90%;height:30px">
-                     <button class="btn" id="newQbutton" style="float:right;width:10%;height:30px;padding-top:3px;padding-bottom:3px;padding-right:5px;padding-left:5px;" onclick="addnewQ()"><i class="fa fa-plus" style="color:green"></i></button>
+                     <button class="btn" id="newQbutton" style="float:right;width:10%;height:30px;padding-top:3px;padding-bottom:3px;padding-right:5px;padding-left:5px;" onclick="addnewQ()">Add</button>
                  </div>
              </div>
-
+             <div id="surveybutton" class="sections">
+                <button class="btn" id="surveyButton" onclick="window.open('https://goo.gl/forms/0YDThu8y4J0dwAlx1'); document.getElementById('submitQbutton').removeAttribute('disabled'); document.getElementById('submitQbutton').style.color='black';" style="width:100%;height:30px;padding-top:3px;padding:3px;" >Survey</button>
+                        </div>
              <div id="next" class="sections">
-             <button class="btn" id="submitQbutton" onclick="submitQs()" style="width:100%;height:30px;padding-top:3px;padding:3px;" >Next</button>
+             <button class="btn" id="submitQbutton" onclick="submitQs()" style="width:100%;height:30px;padding-top:3px;padding:3px; color:lightgrey" diabled="true">Next</button>
                      </div></div>
      </div>
   </div> <!-- End of col-container-->
