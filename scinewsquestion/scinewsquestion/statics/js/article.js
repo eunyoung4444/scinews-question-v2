@@ -50,6 +50,7 @@
 
     reconSidebar();
     addevents();
+    console.log("Hiii")
 }); // End of document ready clause 
 
 
@@ -553,4 +554,12 @@ function opena2(){
     var curorder=currentorder(articleno, userpk);
     a2no=article2(userpk,curorder);
     window.open('http://4cb16589.ngrok.io/question/'+String(a2no), '_blank')
+}
+
+
+function newQmodal(textref){
+    thismodal=document.getElementById("modalQ");
+    text=document.getElementById('test');
+    test.innerText=textref;
+    thismodal.modal();
 }

@@ -28,6 +28,49 @@
              </div>
              
          </div>
+         
+         <!-- Question Modal -->
+        <div class="modal fade" id="modalQ" role="dialog">
+            <div class="modal-dialog">
+            
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+
+        <!-- Highlight Modal -->
+        <div class="modal fade" id="modalH" role="dialog">
+                <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                    </div>
+                    <div class="modal-body">
+                    <p id='test'>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+
         </div>
         <div class="col-4" class="col-container" id="sidebar-container">
           <div id="floating-div">
@@ -40,18 +83,33 @@
                  </div>
              </div>
              <div class="sections" id="Questions">
-                <h6>Questions that you made <small><a id="showless" onclick="ShowLess();" href="#">show less</a></small></h6>
-                <div id='lastlyadded' style="display:none"><small style="color:gray">Lastly added:</small></div>
-                <div id="questions_generated" class="subsections"></div>  <!-- End of selected_questions-->
+                <h6>Questions that this article does not answer <small><a id="showless_q" onclick="ShowLessH();" href="#">show less</a></small></h6>
+                <div id='lastlyaddedq' style="display:none"><small style="color:gray">Lastly added:</small></div>
+                <div id="questions_generated" class="subsections"></div>
+                <div id="addQnoref" class="sections" style="margin:0px;">
+                    <button class="btn norefButtons" id="addQnorefButton"  style="width:100%;height:36px;margin:0px;" onclick="newQmodal('No text selection')">Add</button>
+                </div>     
             </div>
-             <div id="Qgen" class="sections"> 
+
+            <div class="sections" id="Highlights">
+                <h6>Questions that this article answers <small><a id="showless_h" onclick="ShowLessH();" href="#">show less</a></small></h6>
+                <div id='lastlyaddedh' style="display:none"><small style="color:gray">Lastly added:</small></div>
+                <div id="highlights_generated" class="subsections"></div> 
+                <div id="addHnoref" class="sections" style="margin:0px;">
+                    <button class="btn norefButtons" id="addHnorefButton"  style="width:100%;height:36px;margin:0px;" onclick="newQmodal('No text selection')">Add</button>
+                </div>
+            </div>
+
+
+
+             <div id="Qgen" class="sections" style="display:none"> 
                  <h6>What do you want/need to know? </h6>
                  <div id="newQ" style="margin-bottom:20px;">
                      <input type="text" id="newQinput" placeholder="Type in your question"style="width:90%;height:30px">
                      <button class="btn" id="newQbutton" style="float:right;width:10%;height:30px;padding-top:3px;padding-bottom:3px;padding-right:5px;padding-left:5px;" onclick="addnewQ()">Add</button>
                  </div>
              </div>
-             <div id="surveybutton" class="sections">
+             <div id="surveybutton" class="sections" style="display:none">
                 <button class="btn" id="surveyButton" onclick="window.open('https://goo.gl/forms/0YDThu8y4J0dwAlx1'); document.getElementById('submitQbutton').removeAttribute('disabled'); document.getElementById('submitQbutton').style.color='black';" style="width:100%;height:30px;padding-top:3px;padding:3px;" >Survey</button>
                         </div>
              <div id="next" class="sections">
