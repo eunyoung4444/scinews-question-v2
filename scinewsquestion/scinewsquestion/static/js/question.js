@@ -200,7 +200,7 @@ function addevents(){
         xoffset=endline.right;
         yoffset=endline.bottom;
         yscreen=window.scrollY;
-        transform='translate3d('+String(xoffset-110)+'px,'+String(yoffset+yscreen-60)+'px,'+String(10)+'px)'
+        transform='translate3d('+String(xoffset-100)+'px,'+String(yoffset+yscreen-60)+'px,'+String(10)+'px)'
       $('#popoverdiv').css('display','inline');
       $('#popoverdiv').css('position','absolute');
       $('#popoverdiv').css('transform',transform)
