@@ -149,7 +149,7 @@
 }
 
 .refbtn-noref{
-  border-color:#f8c000;
+  border-color:#ffc300;
 }
 
 .refbtn-yesref{
@@ -158,24 +158,14 @@
 }
 
 .tooltip-inner {
-  width: 200px;
+  width: 100px;
   background-color:#fffcf2!important;
-  color:#ffc401;
+  color:#ffb200;
 
 }
 
 .tooltip-arrow{
-  border-bottom-color:#ffc401;
-  border-top-color:#ffc401;
-  border-left-color:#ffc401;
-  border-right-color:#ffc401;
-}
-
-.tool-tip{
-    display:inline-block;
-}
-.tool-tip{
-    pointer-events:none;
+  border-bottom-color:#fffcf2!important
 }
 
 .popover{
@@ -195,39 +185,47 @@
 .sections{
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #f8f8f8;
-  border-radius: 5px !important;
-}
-
-#Questions{
-  border: 2px solid #05b000
-
-}
-#Highlights{
-  border: 2px solid #ffc300
-}
-#Qgen{
-  border: 2px solid rgb(0, 165, 0)
-}
-
-#help{
-  padding:0;
-}
-
-#next{
-  padding:0;
-}
-
-#surveybutton{
-  padding:0;
-}
-
-.subsections{
-  margin-bottom: 10px;
   background-color: #f8f8f8 !important;
   border-radius: 5px !important;
 }
+#next{
+  padding:0px}
 
+#Quiz{
+  border: 2px solid #ffc107
+}
+#help{
+  padding:0px;}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 15px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:1000px; 
+  height:auto;
+  padding:20px;
+  background-color:#ffffff;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+  top: 200px !important;
+}
 .maintext{
     text-align: center;
   font-family: "Segoe UI", sans-serif;
@@ -260,6 +258,12 @@
 	
 	color: red;
 }
+
+#myquestions{
+  text-align: left;
+}
+
+
 
 
 .autocomplete-suggestions { border: 1px solid #999; background: #fff; cursor: default; overflow: auto; }
@@ -433,10 +437,6 @@
   -webkit-margin-end:0px;
 }
 
-.selectable{
-  border: 1px #D5D8DC dashed;
-}
-
 .prevselected{
   background-color: #F9E79F !important;
 }
@@ -447,6 +447,7 @@
 }
 
 /* Question lists on the right side bar */
+/* Question lists on the right side bar */
 .qlist{
   padding-top:3px;
   padding-bottom: 3px;
@@ -454,185 +455,33 @@
 }
 
 
-.checkboxholder{
+
+.deleteholder{
+  padding-left:0px;
+  padding-right:0px;
+  display:flex;
+  align-items:center;
+}
+
+.qrow{
+margin:0px;
+}
+
+.card{
+margin-bottom: 5px;
+}
+
+.deletebutton{
   padding-left:0px;
   padding-right:0px;
 }
 
-.deleteholder{
-    padding-left:0px;
-    padding-right:0px;
-    display:flex;
-    align-items:center;
-  }
-  
-.qrow{
-  margin:0px;
+#submit_quiz{
+  display:flex;
+  justify-content: space-between;
 }
 
-.card{
-  margin-bottom: 5px;
-}
-
-.deletebutton{
-    padding-left:0px;
-    padding-right:0px;
-}
-
-
-
-#submit_question{
-    display:flex;
-    justify-content: space-between;
-}
-
-#showless{
-    font-size:10px;
-}
-
-.annotated{
-  background-color:#ffe89c;
-
-}
-
-.annotated:hover{
-  background-color:#ffdb4a !important;
-}
-
-.selectedannotation{
-  background-color:#ffcc00 !important;
-}
-.annotq{
-  border-style: none;
-}
-
-
-/* right sidebar elements*/
-.norefButtons{
-  width:100% !important;
-  height:36px !important;
-  margin:0px !important;
-  padding:0px !important;
-}
-
-#addQnorefButton{
-  background-color:#05b000;
-  color:#ffffff;
-}
-
-#addHnorefButton{
-  background-color: #f8c000;;
-  color:#ffffff;
-}
-
-/* modal */
-.modalclose{
-  border-style: solid;
-  border-color:lightgray;
-  border-width: 1px;
-}
-
-
-.reselecttext{
-  width:38px;
-  height:38px;
+#popoverclose{
+  float:right;
   padding:0px;
-  margin-left:5px;
-  border-style:solid;
-  border-radius: 4px;
-  border-width:1px;
-  border-color:lightgray;
-
 }
-
-form .likert {
-  list-style:none;
-  width:75%;
-  margin:0;
-  margin-left:15%;
-  padding:0 0 0 0px;
-  display:block;
-  border-bottom:2px solid #efefef;
-  
-}
-form .likert:last-of-type {border-bottom:0;}
-form .likert:before {
-  content: '';
-  position:relative;
-  top:11px;
-  left:7.5%;
-  display:block;
-  background-color:#efefef;
-  height:4px;
-  width:83%;
-}
-form .likert li {
-  display:inline-block;
-  width:13%;
-  text-align:center;
-  vertical-align: top;
-}
-form .likert li input[type=radio] {
-  display:block;
-  position:relative;
-  top:0;
-  left:50%;
-  margin-left:-6px;
-  
-}
-form .likert li label {
-  width:100%;
-  font-size:10px !important;
-
-}
-
-.statement{
-  font-style: italic !important;
-  font-size:20px;
-}
-
-.newrefbutton{
-  border-style: solid;
-  border-radius: 3px;
-  border-width: 2px;
-}
-
-.Qrefed{
-  background-color:hsla(118, 100%, 30%, 0.40);
-
-}
-
-.Qrefed:hover{
-  background-color:hsla(118, 100%, 30%, 0.60) !important;
-}
-
-.selectedQrefed{
-  background-color:hsla(118, 100%, 30%, 0.80) !important;
-}
-
-.Hrefed{
-  background-color:hsla(46, 100%, 65%, 0.40);
-
-}
-
-.Hrefed:hover{
-  background-color:hsla(46, 100%, 65%, 0.60) !important;
-}
-
-.selectedHrefed{
-  background-color:hsla(46, 100%, 65%, 0.80) !important;
-}
-
-.helpdescription{
-  background-color:white; 
-  border-color:lightgray; 
-  border-style: solid;
-  border-width: 1px; 
-  color:lightgray;
-  border-radius:7.5px; 
-  font-size:11px;
-  width:15px;
-  height:15px;
-  padding-left:2px;
-}
-

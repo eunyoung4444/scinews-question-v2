@@ -43,6 +43,7 @@
     if(curorder>1){
         document.getElementById("prevholder").style.display="inline";
         document.getElementById("art1").style.display="inline";
+        document.getElementById('youmay').style.display="inline";
         if(curorder>2){
             document.getElementById("art2").style.display="inline";    
         }
@@ -285,11 +286,13 @@ function resetSelection(status){
     }
     if(status=="q"){
         qref=document.getElementById('modalQclose').getAttribute('data-ref');
+        if(qref!=''){
         qrefid='qref'+String(qref);
         if(document.getElementById(qrefid)){
         orgtext=document.getElementById(qrefid).innerHTML;
         $('#'+qrefid).replaceWith(orgtext);
-        }
+        }}
+        $('#modalQclose').attr('data-ref','');
         document.getElementById('modalQreftext').value='';
         document.getElementById('modalQquestioninput').value='';
         description=document.getElementById('modalQwhy').value='';
@@ -301,11 +304,14 @@ function resetSelection(status){
     else{
         if(status=="h"){
             href=document.getElementById('modalHclose').getAttribute('data-ref');
+            if(href!=''){
             hrefid='href'+String(href);
             if(document.getElementById(hrefid)){
                 orgtext=document.getElementById(hrefid).innerHTML;
                 $('#'+hrefid).replaceWith(orgtext);
                 }
+            }
+            $('#modalHclose').attr('data-ref','');
             document.getElementById('modalHreftext').value='';
             document.getElementById('modalHquestioninput').value='';
             description=document.getElementById('modalHwhy').value='';
@@ -348,6 +354,7 @@ function submitQ(){
                 document.getElementById('modalQreftext').value='';
                 document.getElementById('modalQquestioninput').value='';
                 description=document.getElementById('modalQwhy').value='';
+                $('#modalQclose').attr('data-ref','');
                 Qradios[i].checked=false;
             }
         }
@@ -383,6 +390,7 @@ function submitH(){
                 document.getElementById('modalHreftext').value='';
                 document.getElementById('modalHquestioninput').value='';
                 description=document.getElementById('modalHwhy').value='';
+                $('#modalHclose').attr('data-ref','');
                 Hradios[i].checked=false;
             }
         }
@@ -418,7 +426,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
         qtext=this.parentElement.parentElement.childNodes[0].innerText;
         question=this.parentElement.parentElement.parentElement
         var genid=question.id;
-        console.log(qtext, genid)
         questholder.removeChild(question);
         $.ajax({
             url: 'deletequestion',
@@ -431,7 +438,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
             orgtext=document.getElementById(qrefid).innerHTML;
             $('#'+qrefid).replaceWith(orgtext);  
         }
-        console.log(qtext, articleno, madeby, genid)
         qnum=questholder.childNodes.length;
         ShowLessQ();
         ShowLessQ();
@@ -465,7 +471,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
     });
     document.getElementById("qgens").innerText=String(qno)
     if(questholder.childNodes.length>4){
-        console.log("hi")
         document.getElementById('submitQbutton').disabled=false;
         document.getElementById('submitQbutton').style.color='black';
     }
@@ -643,7 +648,7 @@ function submitQs(){
     });
     curord=curorder;
 
-    highlighturl='../highlight';
+    highlighturl='highlight';
     window.location.replace(highlighturl);
 
     /* if(curord<3){//go to next article

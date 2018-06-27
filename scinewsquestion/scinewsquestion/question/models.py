@@ -22,13 +22,31 @@ class Article(models.Model):
     def __str__(self):
         return self.article_title
 
-class AnnotQuestion(models.Model):
+class Question(models.Model):
     question_research=models.ForeignKey(Research, on_delete=models.CASCADE)
     question_article=models.ForeignKey(Article, on_delete=models.CASCADE)
     question_text=models.CharField(max_length=200)
     question_madeby=models.ForeignKey(User, on_delete=models.CASCADE)
     question_id=models.CharField(max_length=200)
-    question_reftext=models.CharField(max_length=20)
+    question_reftext=models.CharField(max_length=200)
+    question_description=models.CharField(max_length=200)
+    question_importance=models.IntegerField(default=4)
+    question_pubdate=models.DateTimeField('date published')
+    question_deleted=models.BooleanField(default=False)
+    question_deletedate=models.DateTimeField('date deleted')
+    def generate(self):
+        self.save()
+    def __str__(self):
+        return self.question_text
+class Highlight(models.Model):
+    question_research=models.ForeignKey(Research, on_delete=models.CASCADE)
+    question_article=models.ForeignKey(Article, on_delete=models.CASCADE)
+    question_text=models.CharField(max_length=200)
+    question_madeby=models.ForeignKey(User, on_delete=models.CASCADE)
+    question_id=models.CharField(max_length=200)
+    question_reftext=models.CharField(max_length=200)
+    question_description=models.CharField(max_length=200)
+    question_importance=models.IntegerField(default=4)
     question_pubdate=models.DateTimeField('date published')
     question_deleted=models.BooleanField(default=False)
     question_deletedate=models.DateTimeField('date deleted')
@@ -37,19 +55,7 @@ class AnnotQuestion(models.Model):
     def __str__(self):
         return self.question_text
 
-class GenQuestion(models.Model):
-    question_research=models.ForeignKey(Research, on_delete=models.CASCADE)
-    question_article=models.ForeignKey(Article, on_delete=models.CASCADE)
-    question_text=models.CharField(max_length=200)
-    question_id=models.CharField(max_length=200)
-    question_madeby=models.ForeignKey(User, on_delete=models.CASCADE)
-    question_pubdate=models.DateTimeField('date published')
-    question_deleted=models.BooleanField(default=False)
-    question_deletedate=models.DateTimeField('date deleted')
-    def generate(self):
-        self.save()
-    def __str__(self):
-        return self.question_text
+
 
 class SurveyEmbed(models.Model):
     survey_no=models.IntegerField(default=0)
@@ -63,6 +69,7 @@ class SessionStat(models.Model):
     session_article=models.ForeignKey(Article, on_delete=models.CASCADE)
     session_research=models.ForeignKey(Research, on_delete=models.CASCADE)
     session_user=models.ForeignKey(User, on_delete=models.CASCADE)
+    session_mode=models.CharField(max_length=200)
     session_starttime=models.DateTimeField('date published')
     session_endtime=models.DateTimeField('date published')
     def generate(self):
@@ -70,4 +77,15 @@ class SessionStat(models.Model):
     def __str__(self):
         return self.session_user.username + str(self.session_order)
     
-
+class SurveyStat(models.Model):
+    survey_order=models.IntegerField(default=0)
+    survey_article=models.ForeignKey(Article, on_delete=models.CASCADE)
+    survey_research=models.ForeignKey(Research, on_delete=models.CASCADE)
+    survey_user=models.ForeignKey(User, on_delete=models.CASCADE)
+    survey_eval=models.CharField(max_length=200)
+    survey_starttime=models.DateTimeField('date published')
+    survey_endtime=models.DateTimeField('date published')
+    def generate(self):
+        self.save()
+    def __str__(self):
+        return self.survey_user.username + str(self.survey_order)

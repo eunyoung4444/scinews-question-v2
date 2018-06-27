@@ -43,6 +43,7 @@
     if(curorder>1){
         document.getElementById("prevholder").style.display="inline";
         document.getElementById("art1").style.display="inline";
+        document.getElementById('youmay').style.display="inline";
         if(curorder>2){
             document.getElementById("art2").style.display="inline";    
         }
@@ -165,7 +166,7 @@ function reconSidebar(){
     $.ajax({
         url: 'sessionstart',
         method: 'POST',
-        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'question'}
+        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'highlight'}
     });
 }/*    var questholder=document.getElementById("selected_questions");
    var qrows=document.getElementsByClassName("qrow");
@@ -285,11 +286,13 @@ function resetSelection(status){
     }
     if(status=="q"){
         qref=document.getElementById('modalQclose').getAttribute('data-ref');
-        qrefid='qref'+String(qref);
-        if(document.getElementById(qrefid)){
-        orgtext=document.getElementById(qrefid).innerHTML;
-        $('#'+qrefid).replaceWith(orgtext);
-        }
+        if(qref!=''){
+            qrefid='qref'+String(qref);
+            if(document.getElementById(qrefid)){
+            orgtext=document.getElementById(qrefid).innerHTML;
+            $('#'+qrefid).replaceWith(orgtext);
+            }}
+        $('#modalQclose').attr('data-ref','');
         document.getElementById('modalQreftext').value='';
         document.getElementById('modalQquestioninput').value='';
         description=document.getElementById('modalQwhy').value='';
@@ -301,11 +304,14 @@ function resetSelection(status){
     else{
         if(status=="h"){
             href=document.getElementById('modalHclose').getAttribute('data-ref');
-            hrefid='href'+String(href);
-            if(document.getElementById(hrefid)){
-                orgtext=document.getElementById(hrefid).innerHTML;
-                $('#'+hrefid).replaceWith(orgtext);
-                }
+            if(href!=''){
+                hrefid='href'+String(href);
+                if(document.getElementById(hrefid)){
+                    orgtext=document.getElementById(hrefid).innerHTML;
+                    $('#'+hrefid).replaceWith(orgtext);
+                    }
+            }
+            $('#modalHclose').attr('data-ref','');
             document.getElementById('modalHreftext').value='';
             document.getElementById('modalHquestioninput').value='';
             description=document.getElementById('modalHwhy').value='';
@@ -348,6 +354,7 @@ function submitQ(){
                 document.getElementById('modalQreftext').value='';
                 document.getElementById('modalQquestioninput').value='';
                 description=document.getElementById('modalQwhy').value='';
+                $('#modalQclose').attr('data-ref','');
                 Qradios[i].checked=false;
             }
         }
@@ -383,6 +390,7 @@ function submitH(){
                 document.getElementById('modalHreftext').value='';
                 document.getElementById('modalHquestioninput').value='';
                 description=document.getElementById('modalHwhy').value='';
+                $('#modalHclose').attr('data-ref','');
                 Hradios[i].checked=false;
             }
         }
@@ -418,7 +426,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
         qtext=this.parentElement.parentElement.childNodes[0].innerText;
         question=this.parentElement.parentElement.parentElement
         var genid=question.id;
-        console.log(qtext, genid)
         questholder.removeChild(question);
         $.ajax({
             url: 'deletequestion',
@@ -431,7 +438,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
             orgtext=document.getElementById(qrefid).innerHTML;
             $('#'+qrefid).replaceWith(orgtext);  
         }
-        console.log(qtext, articleno, madeby, genid)
         qnum=questholder.childNodes.length;
         ShowLessQ();
         ShowLessQ();
@@ -465,7 +471,6 @@ function addnewQ(selectedtext,newquestion, description, imp){
     });
     document.getElementById("qgens").innerText=String(qno)
     if(questholder.childNodes.length>4){
-        console.log("hi")
         document.getElementById('submitQbutton').disabled=false;
         document.getElementById('submitQbutton').style.color='black';
     }
@@ -507,7 +512,7 @@ function addnewH(selectedtext,newquestion, description, imp){
             data:{'text':qtext, 'articleno':articleno, 'madeby':madeby, 'genid':genid}
         });
         hno=genid.substring(4,genid.length);
-        hrefid='href'+qno
+        hrefid='href'+hno
         if(document.getElementById(hrefid)){
             orgtext=document.getElementById(hrefid).innerHTML;
             $('#'+hrefid).replaceWith(orgtext);  
@@ -517,7 +522,7 @@ function addnewH(selectedtext,newquestion, description, imp){
         ShowLessH();
         if(hnum<1){ShowLessH();
         } 
-        if(qnum<5){
+        if(hnum<5){
             document.getElementById('submitHbutton').disabled=true;
             document.getElementById('submitHbutton').style.color='lightgray';
 
@@ -545,7 +550,7 @@ function addnewH(selectedtext,newquestion, description, imp){
         data:{'reftext':selectedtext,'text':newQinput,'description':description,'importance':imp, 'articleno':articleno, 'madeby':madeby,'genid':genid}
     });
     document.getElementById("hgens").innerText=String(hno)
-    if(questholder.childNodes.length>0){
+    if(questholder.childNodes.length>4){
         document.getElementById('submitHbutton').disabled=false;
         document.getElementById('submitHbutton').style.color='black';
     }
@@ -643,7 +648,7 @@ function submitQs(){
     });
     curord=curorder;
 
-    highlighturl='../highlight';
+    highlighturl='highlight';
     window.location.replace(highlighturl);
 
     /* if(curord<3){//go to next article
@@ -658,19 +663,82 @@ function submitQs(){
 
 
 function submitHs(){
+    $('#modalS').modal();
+    var upk=Number(document.getElementById('userpk').innerText);
+    var articleno=Number(document.getElementById("ano").innerText);
+    var madeby=document.getElementById('username').innerText;
+    var curorder=Number(document.getElementById("order").innerHTML);
+    var nums=10;
+    var evals=new Array(nums);
+    
+    for (var i=1;i<(nums+1);i++){
+        evals[i-1]=0;
+    }
+
+    $.ajax({
+        url: 'surveystart',
+        method: 'POST',
+        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'eval':evals.toString()}
+    });    
+}
+
+
+function submitS(){
+    var nums=10;
+    var evals=new Array(nums);
     var upk=Number(document.getElementById('userpk').innerText);
     var articleno=Number(document.getElementById("ano").innerText);
     var madeby=document.getElementById('username').innerText;
     var curorder=Number(document.getElementById("order").innerHTML);
 
+    
+    for (var i=1;i<(nums+1);i++){
+        evals[i-1]=0;
+        curlikertName='likertE'+String(i);
+        Radios=document.getElementsByName(curlikertName);
+        console.log(curlikertName)
+        for (var j=0, length=Radios.length; j<length;j++){
+            if(Radios[j].checked){
+                evals[i-1]=Radios[j].value;
+                break;
+            }
+        }        
+    }
+
+    missings='';
+    missed=false;
+    for (var i=1;i<(nums+1);i++){
+        if(evals[i-1]==0){
+            missings=missings+', '+String(i);
+            missed=true;
+        }
+    }
+
+    if(missed){
+        window.alert("Answer for the questions with following numbers: "+missings.substring(2,missings.length));
+    }
+    else{
+        $.ajax({
+            url: 'surveyend',
+            method: 'POST',
+            data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'eval':evals.toString()}
+        }); 
+        tonextarticle();
+    }
+}
+
+function tonextarticle(){
+    var upk=Number(document.getElementById('userpk').innerText);
+    var articleno=Number(document.getElementById("ano").innerText);
+    var madeby=document.getElementById('username').innerText;
+    var curorder=Number(document.getElementById("order").innerHTML);
+    curord=curorder;
     $.ajax({
         url: 'sessionend',
         method: 'POST',
         data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'highlight'}
     });
-    curord=curorder;
 
-    
     if(curord<3){//go to next article
         nextano=nextarticle(upk, curord);
         var newurl='../'+ nextano.toString();
