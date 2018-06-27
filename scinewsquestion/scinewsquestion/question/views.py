@@ -26,6 +26,16 @@ def tutorial(request):
     return render(request, 'question/tutorial.html',context)
 
 @csrf_exempt
+def tutorial2(request):
+    context={}
+    return render(request, 'question/tutorial2.html',context)
+
+@csrf_exempt
+def tutorial3(request):
+    context={}
+    return render(request, 'question/tutorial3.html',context)
+
+@csrf_exempt
 def question(request,article_no):
     try:
         article=Article.objects.get(article_no=article_no)

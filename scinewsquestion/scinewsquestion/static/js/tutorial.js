@@ -20,6 +20,9 @@ function firstarticle(upk){
     return ano    
 }
 
+function next(){
+    window.location.replace('../tutorial2');
+}
 function start(){
     var userpk=Number(document.getElementById('userpk').innerText);
     ano=firstarticle(userpk);

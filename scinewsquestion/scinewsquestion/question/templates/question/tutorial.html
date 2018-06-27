@@ -16,34 +16,27 @@
                 <div class="col-10" class="col-container">
                         <div id="tutorial">
                                 <div id="head">
-                                <h1 class="title">Tutorial and Overview </h1>
+                                <h1 class="title">Instruction (1/3)</h1>
                                 <hr>
                                 </div>
                                 <div  class="row">
-                                        In this session, you are going to read 3 news articles on a scientific research.<br>
-                                        <div><img src="{% static "media/overall.png" %}" style="width:70%"><br></div>
-                                        <br> <br>For each article, you are supposed to 
-                                        <ul>
-                                                <li> (1) Read the article and generate some question on it.  
-                                                <p> Read the article and raise some questions. Here each question can be about what you want to know/need while reading the article.</p> 
-                                                <p style="color:blue"> You CAN generate duplicated question for different articles. </p> 
-                                                <p style="color:red"> You CAN see previous articles. However you SHOULD NOT add questions on the previous articles.</p> 
-                                                <ul>
-                                                        <li>You can generate a question on a text range of your choice.
-                                                        <div><img src="{% static "media/annot.png" %}" style="width:80%"><br><br></div></li>
-                                                        <li> You can also generate a question on the right side-bar without specific text selection.
-                                                         <div><img src="{% static "media/right.png" %}" style="width:40%"></div>
-                                                        </li></ul><br><br></li>
-                                                <li> (2) Do the Post-Article survey <p> Survey on the article itself and your experience.</p> </li>
-                                                <li> (3) Push 'Next' button to proceed. </li>
-                                        </ul>
-                                        <br>
+                                        <p>In this HIT, you are going to read 3 news articles on ONE scientific research. Each article tries to deliver the same scientific research findings to their audiences.</p>
+                                        <p>What you are going to do is basically <b>finding out what information each article give or does not give to you.</b></p>
+
+                                        <p>To do so, we ask you to read each article and generate (1) list of questions that each article cannot answer and (2) list of questions that each article can answer.</p>
+
+                                        <p>To be specific, for each article, you will have two sessions - (1) Reading + Questioning and (2) Reviewing + Highlighting. In each session, you are asked to do the followings. </p>
+                                        <img src="{% static "media/sessions.png" %}" style="width:85%;align-self: center;padding-left:10%;padding-bottom:20px;">
+                                       
+                                        <p>Below shows the overall process of this HIT. </p>
+                                        <img src="{% static "media/flow.png" %}" style="width:85%;align-self: center;padding-left:10%;padding-bottom:20px;">
+
                                         
                                 </div>
                                 <div  class="row">
                                         <br>
                                         <br>
-                                        <div style="text-align:right;width:100%" >Click this button to start your first task. <button class="btn btn-info" id="startbutton" onclick="start()" dataref="{{ user.id }}"> START </button>
+                                        <div style="text-align:right;width:100%" ><button class="btn btn-info" id="nextbutton" onclick="next()" dataref="{{ user.id }}"> NEXT </button>
                                         </div>
                                 </div>
                         

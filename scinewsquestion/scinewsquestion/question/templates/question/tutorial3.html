@@ -1,0 +1,50 @@
+   {% extends "base.html" %}
+   {% load staticfiles %}
+    {% block scripts %}
+    <script src="{% static "js/tutorial.js" %}" type="text/javascript" ></script>
+    <link href="{% static "css/tutorial.css" %}" rel="stylesheet"> 
+    {% endblock %}    
+    {% block document_container %}
+    <div style="min-height:100%;" class="container-fluid" id="background">
+        <!--Top margin, can be used as nav bar or so, later. -->
+         <div class="row" id="top-margin">
+                 <div class="col-10" class="col-container"></div>
+                 <div class="col-2" class="col-container"> user: <p id="username">{{ user.get_username }}</p>  <p id="userpk" style="display:none">{{ user.pk }}</p></div>
+         </div> 
+         <div class="row" id="main">
+                <div class="col-1" class="col-container"></div>
+                <div class="col-10" class="col-container">
+                        <div id="tutorial">
+                                <div id="head">
+                                <h1 class="title">Instruction (3/3)</h1>
+                                <hr>
+                                </div>
+                                <div  class="row">
+                                        Before you get started, please note the following. 
+                                        <ul>
+                                                <li> On the second and the thrid article, you can generate questions that were generated in the previous article(s).</li>
+                                                <li> While reading the second and the thrid article, you can access previous article by clicking button on the top. However, you cannot see questions that you generated in the previous article.
+                                                                <div><img src="{% static "media/preva.png" %}" style="width:60%;padding-left:20%;" ><br><br></div>
+                                                </li>
+                                        </ul>
+                                        
+                                </div>
+                                <div  class="row">
+                                        <br>
+                                        <br>
+                                        <div style="text-align:right;width:100%" >Click this button to start your first task. <button class="btn btn-info" id="startbutton" onclick="start()" dataref="{{ user.id }}"> START </button>
+                                        </div>
+                                </div>
+                        
+                        </div>
+                </div>
+                <div class="col-1" class="col-container"></div>
+                </div> <!-- End of col-container-->
+                <div class="row" id="bottom-margin">
+                                <div class="col-10" class="col-container"></div>
+                                <div class="col-2" class="col-container"> </p> </div>
+                        </div> 
+</div>
+
+    
+{% endblock %}
