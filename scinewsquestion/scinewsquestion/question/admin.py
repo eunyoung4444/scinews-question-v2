@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Article, Question, Highlight,  Research, SurveyEmbed, SessionStat, SurveyStat 
-from import_export import resources
 # Register your models here.
 
 admin.site.register(Article)
