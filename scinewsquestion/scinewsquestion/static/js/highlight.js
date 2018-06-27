@@ -640,11 +640,11 @@ function submitQs(){
     var articleno=Number(document.getElementById("ano").innerText);
     var madeby=document.getElementById('username').innerText;
     var curorder=Number(document.getElementById("order").innerHTML);
-
+    var curhtml=$('html')
     $.ajax({
         url: 'sessionend',
         method: 'POST',
-        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'question'}
+        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'question','htmlresult':curhtml}
     });
     curord=curorder;
 
@@ -732,11 +732,12 @@ function tonextarticle(){
     var articleno=Number(document.getElementById("ano").innerText);
     var madeby=document.getElementById('username').innerText;
     var curorder=Number(document.getElementById("order").innerHTML);
+    var curhtml=$('html')[0].innerHTML;
     curord=curorder;
     $.ajax({
         url: 'sessionend',
         method: 'POST',
-        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'highlight'}
+        data:{'articleno':articleno, 'user':madeby, 'order':curorder, 'mode':'highlight','htmlresult':curhtml}
     });
 
     if(curord<3){//go to next article

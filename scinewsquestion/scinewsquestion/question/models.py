@@ -71,19 +71,42 @@ class SessionStat(models.Model):
     session_user=models.ForeignKey(User, on_delete=models.CASCADE)
     session_mode=models.CharField(max_length=200)
     session_starttime=models.DateTimeField('date published')
+    def generate(self):
+        self.save()
+    def __str__(self):
+        return self.session_user.username + str(self.session_order)
+
+class SessionEndStat(models.Model):
+    session_order=models.IntegerField(default=0)
+    session_article=models.ForeignKey(Article, on_delete=models.CASCADE)
+    session_research=models.ForeignKey(Research, on_delete=models.CASCADE)
+    session_user=models.ForeignKey(User, on_delete=models.CASCADE)
+    session_mode=models.CharField(max_length=200)
+    session_html=models.CharField(max_length=99999999)
     session_endtime=models.DateTimeField('date published')
     def generate(self):
         self.save()
     def __str__(self):
         return self.session_user.username + str(self.session_order)
+
     
 class SurveyStat(models.Model):
     survey_order=models.IntegerField(default=0)
     survey_article=models.ForeignKey(Article, on_delete=models.CASCADE)
     survey_research=models.ForeignKey(Research, on_delete=models.CASCADE)
     survey_user=models.ForeignKey(User, on_delete=models.CASCADE)
-    survey_eval=models.CharField(max_length=200)
     survey_starttime=models.DateTimeField('date published')
+    def generate(self):
+        self.save()
+    def __str__(self):
+        return self.survey_user.username + str(self.survey_order)
+
+class SurveyEndStat(models.Model):
+    survey_order=models.IntegerField(default=0)
+    survey_article=models.ForeignKey(Article, on_delete=models.CASCADE)
+    survey_research=models.ForeignKey(Research, on_delete=models.CASCADE)
+    survey_user=models.ForeignKey(User, on_delete=models.CASCADE)
+    survey_eval=models.CharField(max_length=200)
     survey_endtime=models.DateTimeField('date published')
     def generate(self):
         self.save()

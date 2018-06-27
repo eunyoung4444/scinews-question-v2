@@ -168,7 +168,7 @@ def sessionstart(request, article_no):
     thisArticle=Article.objects.get(article_no=articleno)
     thisResearch=thisArticle.article_research    
     username=User.objects.get(username=user)
-    thisStat=SessionStat(session_order=order,session_article=thisArticle, session_research=thisResearch, session_user=username, session_starttime=startdate, session_endtime=startdate, session_mode=mode)
+    thisStat=SessionStat(session_order=order,session_article=thisArticle, session_research=thisResearch, session_user=username, session_starttime=startdate, session_mode=mode)
     thisStat.save()
     return HttpResponseRedirect('')
 
@@ -178,12 +178,12 @@ def sessionend(request, article_no):
     user=request.POST.get('user',None)
     order=request.POST.get('order',None)
     mode=request.POST.get('mode',None)
+    htmls=request.POST.get('htmlresult',None)
     enddate=timezone.now()
     thisArticle=Article.objects.get(article_no=articleno)
     thisResearch=thisArticle.article_research    
     username=User.objects.get(username=user)
-    thisStat=SessionStat.objects.get(session_order=order,session_article=thisArticle, session_research=thisResearch, session_user=username, session_mode=mode)
-    thisStat.session_endtime=enddate
+    thisStat=SessionEndStat(session_order=order,session_article=thisArticle, session_research=thisResearch, session_user=username, session_endtime=enddate, session_mode=mode, session_html=htmls)
     thisStat.save()
     return HttpResponseRedirect('')
 
@@ -192,12 +192,11 @@ def surveystart(request, article_no):
     articleno=request.POST.get('articleno',None)
     user=request.POST.get('user',None)
     order=request.POST.get('order',None)
-    evals=request.POST.get('eval',None)
     startdate=timezone.now()
     thisArticle=Article.objects.get(article_no=articleno)
     thisResearch=thisArticle.article_research    
     username=User.objects.get(username=user)
-    thisStat=SurveyStat(survey_order=order,survey_article=thisArticle, survey_research=thisResearch, survey_user=username, survey_starttime=startdate, survey_endtime=startdate, survey_eval=evals)
+    thisStat=SurveyStat(survey_order=order,survey_article=thisArticle, survey_research=thisResearch, survey_user=username, survey_starttime=startdate)
     thisStat.save()
     return HttpResponseRedirect('')
 
@@ -211,9 +210,8 @@ def surveyend(request, article_no):
     thisArticle=Article.objects.get(article_no=articleno)
     thisResearch=thisArticle.article_research    
     username=User.objects.get(username=user)
-    thisStat=SurveyStat.objects.get(survey_order=order,survey_article=thisArticle, survey_research=thisResearch, survey_user=username)
-    thisStat.survey_endtime=enddate
-    thisStat.survey_eval=evals
+    thisStat=SurveyEndStat(survey_order=order,survey_article=thisArticle, survey_research=thisResearch, survey_user=username, survey_endtime=enddate, survey_eval=evals)
     thisStat.save()
+    
     return HttpResponseRedirect('')
 
