@@ -23,6 +23,11 @@ function firstarticle(upk){
 function next(){
     window.location.replace('../tutorial2');
 }
+
+function next2(){
+    window.location.replace('../tutorial3');
+}
+
 function start(){
     var userpk=Number(document.getElementById('userpk').innerText);
     ano=firstarticle(userpk);
