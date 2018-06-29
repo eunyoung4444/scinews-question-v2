@@ -120,7 +120,7 @@ function opena1(){
     var userpk=Number(document.getElementById('userpk').innerText);
     var curorder=currentorder(articleno, userpk);
     a1no=article1(userpk,curorder);
-    window.open('http://4cb16589.ngrok.io/question/'+String(a1no), '_blank')//http://4cb16589.ngrok.io/question/login/
+    window.open('http://54.165.63.165:8000/question/'+String(a1no), '_blank')//http://4cb16589.ngrok.io/question/login/
 }
 
 function opena2(){
@@ -128,7 +128,7 @@ function opena2(){
     var userpk=Number(document.getElementById('userpk').innerText);
     var curorder=currentorder(articleno, userpk);
     a2no=article2(userpk,curorder);
-    window.open('http://4cb16589.ngrok.io/question/'+String(a2no), '_blank')
+    window.open('http://54.165.63.165:8000/question/'+String(a2no), '_blank')
 }
 
 
