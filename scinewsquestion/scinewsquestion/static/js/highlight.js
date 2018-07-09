@@ -53,6 +53,70 @@
     addevents();
 }); // End of document ready clause 
 
+
+function currentorder(ano, upk){
+    var orders=[
+        [1,2,3],
+        [1,2,3],
+        [3,1,2],
+        [3,2,1],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    ord=myorder.indexOf(ano-3)+1 //1,2,3
+    return ord    
+}
+
+function nextarticle(upk, curord){
+    //curord = 1 or 2
+    var orders=[
+        [1,2,3],
+        [1,2,3],
+        [3,1,2],
+        [3,2,1],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    nextorder=curord
+    nextano=myorder[nextorder]+3
+    return nextano
+}
+
+function article1(upk, curord){
+    var orders=[
+        [1,2,3],
+        [1,2,3],
+        [3,1,2],
+        [3,2,1],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    prevano=myorder[0]
+    return prevano+3 
+}
+
+function article2(upk, curord){
+    var orders=[
+        [1,2,3],
+        [1,2,3],
+        [3,1,2],
+        [3,2,1],
+        [3,1,2],
+        [3,2,1]
+    ];
+    group=upk%6;
+    myorder=orders[group]
+    prevprevano=myorder[1]
+    return prevprevano+3 
+}
+
+/* 
 function currentorder(ano, upk){
     var orders=[
         [1,2,3],
@@ -113,7 +177,7 @@ function article2(upk, curord){
     myorder=orders[group]
     prevprevano=myorder[1]
     return prevprevano 
-}
+} */
 
 function opena1(){
     var articleno=Number(document.getElementById("ano").innerText);
