@@ -738,6 +738,7 @@ function submitHs(){
     for (var i=1;i<(nums+1);i++){
         evals[i-1]=0;
     }
+    console.log(curorder,nextarticle(upk, curorder))
 
     $.ajax({
         url: 'surveystart',
