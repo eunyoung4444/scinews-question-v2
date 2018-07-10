@@ -65,7 +65,7 @@ function currentorder(ano, upk){
     ];
     group=upk%6;
     myorder=orders[group]
-    ord=myorder.indexOf(ano-3)+1 //1,2,3
+    ord=myorder.indexOf(ano)+1 //1,2,3
     return ord    
 }
 
@@ -82,7 +82,7 @@ function nextarticle(upk, curord){
     group=upk%6;
     myorder=orders[group]
     nextorder=curord
-    nextano=myorder[nextorder]+3
+    nextano=myorder[nextorder]
     return nextano
 }
 
@@ -98,7 +98,7 @@ function article1(upk, curord){
     group=upk%6;
     myorder=orders[group]
     prevano=myorder[0]
-    return prevano+3 
+    return prevano
 }
 
 function article2(upk, curord){
@@ -113,7 +113,7 @@ function article2(upk, curord){
     group=upk%6;
     myorder=orders[group]
     prevprevano=myorder[1]
-    return prevprevano+3 
+    return prevprevano
 }
 
 /* 
